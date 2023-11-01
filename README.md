@@ -43,8 +43,9 @@ info.list
 ```
 
 ```yaml
-scan: ^newest
+dependencies:
+  scanned: [latest version]
 ```
 ```dart
-import 'package:scan/scan.dart';
+import 'package:scanned/scanned.dart';
 ```
