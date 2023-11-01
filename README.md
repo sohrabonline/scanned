@@ -46,6 +46,9 @@ info.list
 dependencies:
   scanned: [latest version]
 ```
+
+##### flutter/dart
+
 ```dart
 import 'package:scanned/scanned.dart';
 ```
