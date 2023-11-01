@@ -1,6 +1,6 @@
 name: scanned
 description: Flutter plugin for scan barcode an QR in iOS and Android.
-version: 0.0.2+1
+version: 0.0.2+2
 homepage:
 
 environment:

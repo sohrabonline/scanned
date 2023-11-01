@@ -49,3 +49,21 @@ dependencies:
 ```dart
 import 'package:scanned/scanned.dart';
 ```
+
+```dart
+  Scanner(
+      controller: cubit.scanController,
+      scanAreaScale: .65,
+      scanLineColor: AppColors.main,
+      onCapture: (data) async {
+              await cubit.stopCamera();
+              if (data.isNotNullOrEmpty) await onScanned(data);
+              await Future.delayed(Duration(
+              milliseconds: ((reactivateTime ??
+              Configs.defaultCameraScanIdleTimeout) *
+              1000)
+                  .toInt()));
+              await cubit.startCamera(true);
+        }
+    )
+```

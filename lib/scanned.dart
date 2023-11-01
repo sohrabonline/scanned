@@ -19,8 +19,8 @@ class Scanned {
   }
 }
 
-class ScanView extends StatefulWidget {
-  ScanView({
+class Scanner extends StatefulWidget {
+  Scanner({
     this.controller,
     this.onCapture,
     this.scanLineColor = Colors.green,
@@ -34,10 +34,10 @@ class ScanView extends StatefulWidget {
   final double scanAreaScale;
 
   @override
-  State<StatefulWidget> createState() => _ScanViewState();
+  State<StatefulWidget> createState() => _ScannerState();
 }
 
-class _ScanViewState extends State<ScanView> {
+class _ScannerState extends State<Scanner> {
   MethodChannel? _channel;
 
   @override
