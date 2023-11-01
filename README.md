@@ -51,19 +51,45 @@ import 'package:scanned/scanned.dart';
 ```
 
 ```dart
+  ScanController scanController = ScanController();
+
   Scanner(
-      controller: cubit.scanController,
+      controller: scanController,
       scanAreaScale: .65,
-      scanLineColor: AppColors.main,
+      scanLineColor: Colors.blue,
       onCapture: (data) async {
-              await cubit.stopCamera();
+              await  stopCamera();
               if (data.isNotNullOrEmpty) await onScanned(data);
               await Future.delayed(Duration(
               milliseconds: ((reactivateTime ??
               Configs.defaultCameraScanIdleTimeout) *
               1000)
                   .toInt()));
-              await cubit.startCamera(true);
+              await startCamera();
         }
     )
+```
+
+
+```dart
+  ScanController scanController = ScanController();
+
+  // toggle torch and get its status as bool
+  final bool turnedOn = scanController.toggleTorchMode();
+
+  //turn on Flash
+  await scanController.turnOn();
+
+  //turn off Flash
+  await scanController.turnOff();
+  
+  // start or resume camera
+  await scanController.resume();
+
+  //pause camera
+  await scanController.pause();
+
+  //pause camera and turnOffFlash
+  scanController.pause(turnOffFlash: true);
+  
 ```
