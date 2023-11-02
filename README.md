@@ -22,7 +22,7 @@ Flutter plugin for scan barcode an QR in iOS and Android.
 
 ### prepare
 
-##### ios
+##### iOS
 ##### info.plist
 ```
 <key>NSCameraUsageDescription</key>
@@ -31,7 +31,7 @@ Flutter plugin for scan barcode an QR in iOS and Android.
 <key>io.flutter.embedded_views_preview</key>
 <string>YES</string>
 ```
-##### android 
+##### Android 
 ###### AndroidManifest
 ```xml
 <uses-permission android:name="android.permission.CAMERA" />
