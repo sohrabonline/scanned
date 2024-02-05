@@ -1,5 +1,3 @@
-import 'scanned_platform_interface.dart';
-
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
